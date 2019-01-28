@@ -5,7 +5,7 @@ using AutumnBox.OpenFramework.Open;
 
 namespace AutumnBox.KFMARK
 {
-    [ExtName("一键激活快否", "en-us:一键去除Wi-FI x和!号模块-暂定")]
+    [ExtName("一键激活快否", "en-us:一键激活快否")]
     [ExtDesc("可以一键激活快否")]
     [ExtAuth("MonoLogueChi")]
     [ExtVersion(0, minor: 0, build: 1)]
