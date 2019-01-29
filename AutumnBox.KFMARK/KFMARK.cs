@@ -28,7 +28,8 @@ namespace AutumnBox.KFMARK
                 //检测设备连接状况
                 ui.Tip = "正在检测设备连接状态";
                 ui.Progress = 10;
-                ui.WriteLine(_command.DeviceInfo(device).Replace("\r\n\r\n", ""));
+                ui.WriteLine("正在检测设备连接情况");
+                ui.WriteOutput(_command.DeviceInfo(device).Replace("\r\n\r\n", ""));
 
                 //检测是否安装快否
                 ui.Tip = "正在检测快否是否安装";

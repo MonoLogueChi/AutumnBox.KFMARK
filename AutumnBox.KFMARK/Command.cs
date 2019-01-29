@@ -9,8 +9,16 @@ namespace AutumnBox.KFMARK
 {
     public class Command
     {
+        private const string KFURL = "https://atmb.sm9.top/AutumnBox/拓展模块/MonoLogueChi/KFMARK/static/KFMARK.Beta.Android.apk";
+        private const string KFDURL = "https://atmb.sm9.top/AutumnBox/拓展模块/MonoLogueChi/KFMARK/static/daemon";
+
         private readonly CommandExecutor _executer = new CommandExecutor();
 
+        /// <summary>
+        /// 连接设备信息
+        /// </summary>
+        /// <param name="device"></param>
+        /// <returns></returns>
         public string DeviceInfo(IDevice device)
         {
             return _executer.Adb(device, "devices").Output;
@@ -77,10 +85,10 @@ namespace AutumnBox.KFMARK
                     if (YNGetKF)
                     {
                         webClient.DownloadFile(
-                            new Uri("https://atmb.sm9.top/AutumnBox/拓展模块/MonoLogueChi/KFMARK/static/KFMARK.Beta.Android.apk"),
+                            new Uri(KFURL),
                             Path.Combine(tmp.Path, "com.af.benchaf.apk"));
                     }
-                    webClient.DownloadFile(new Uri("https://atmb.sm9.top/AutumnBox/拓展模块/MonoLogueChi/KFMARK/static/daemon"), Path.Combine(tmp.Path, "daemon"));
+                    webClient.DownloadFile(new Uri(KFDURL), Path.Combine(tmp.Path, "daemon"));
                     return true;
                 }
                 catch
