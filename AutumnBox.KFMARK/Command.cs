@@ -9,7 +9,13 @@ namespace AutumnBox.KFMARK
 {
     public class Command
     {
+        /// <summary>
+        /// 快否apk下载地址
+        /// </summary>
         private const string KFURL = "https://atmb.sm9.top/AutumnBox/拓展模块/MonoLogueChi/KFMARK/static/KFMARK.Beta.Android.apk";
+        /// <summary>
+        /// 快否执行文件下载地址
+        /// </summary>
         private const string KFDURL = "https://atmb.sm9.top/AutumnBox/拓展模块/MonoLogueChi/KFMARK/static/daemon";
 
         private readonly CommandExecutor _executer = new CommandExecutor();
