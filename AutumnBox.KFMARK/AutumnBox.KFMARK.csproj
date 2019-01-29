@@ -31,11 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutumnBox.Basic, Version=2019.1.18.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutumnBox.SDK.8.24.0-beta\lib\net461\AutumnBox.Basic.dll</HintPath>
+    <Reference Include="AutumnBox.Basic, Version=2019.1.28.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutumnBox.SDK.8.25.0-beta\lib\net461\AutumnBox.Basic.dll</HintPath>
     </Reference>
-    <Reference Include="AutumnBox.OpenFramework, Version=8.24.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutumnBox.SDK.8.24.0-beta\lib\net461\AutumnBox.OpenFramework.dll</HintPath>
+    <Reference Include="AutumnBox.OpenFramework, Version=8.25.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutumnBox.SDK.8.25.0-beta\lib\net461\AutumnBox.OpenFramework.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>

@@ -17,7 +17,7 @@ namespace AutumnBox.KFMARK
     {
         private readonly Command _command = new Command();
 
-        public void Main(ILeafUI ui, IUx ux, IDevice device, ILogger logger, ITemporaryFloder tmp)
+        public void Main(ILeafUI ui, IDevice device, ILogger logger, ITemporaryFloder tmp)
         {
             using (ui)
             {
@@ -39,7 +39,7 @@ namespace AutumnBox.KFMARK
                 if (IsInstallKF)
                 {
                     ui.WriteLine("已安装快否");
-                    var YNGetKF = ux.DoYN("已安装快否，但建议安装我们适配的版本用于激活", "马上安装", "不，坚持使用我自己的版本");
+                    var YNGetKF = ui.DoYN("已安装快否，但建议安装我们适配的版本用于激活", "马上安装", "不，坚持使用我自己的版本");
                     if (YNGetKF)
                     {
                         var UnInstallKF = _command.UnInstallKF(device);
@@ -52,8 +52,8 @@ namespace AutumnBox.KFMARK
                         {
                             ui.WriteLine("卸载失败，请手动卸载");
                             ui.Finish("卸载失败");
+                            return;
                         }
-
                     }
                 }
                 else
@@ -72,6 +72,7 @@ namespace AutumnBox.KFMARK
                 {
                     ui.WriteLine("快否下载出错");
                     ui.Finish("下载出错");
+                    return;
                 }
 
                 ui.Progress = 70;
@@ -88,6 +89,7 @@ namespace AutumnBox.KFMARK
                     {
                         ui.WriteLine("安装失败");
                         ui.Finish("安装快否失败");
+                        return;
                     }
                 }
 
@@ -102,9 +104,11 @@ namespace AutumnBox.KFMARK
                 {
                     ui.WriteLine("激活失败");
                     ui.Finish("激活失败");
+                    return;
                 }
 
                 ui.Finish();
+                return;
             }
         }
     }
