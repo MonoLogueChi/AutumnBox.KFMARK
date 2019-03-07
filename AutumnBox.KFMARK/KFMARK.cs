@@ -1,6 +1,9 @@
 ﻿using AutumnBox.Basic.Device;
+using AutumnBox.Logging;
 using AutumnBox.OpenFramework.Extension;
-using AutumnBox.OpenFramework.Extension.LeafExtension;
+using AutumnBox.OpenFramework.LeafExtension;
+using AutumnBox.OpenFramework.LeafExtension.Fast;
+using AutumnBox.OpenFramework.LeafExtension.Kit;
 using AutumnBox.OpenFramework.Open;
 
 namespace AutumnBox.KFMARK
@@ -8,7 +11,7 @@ namespace AutumnBox.KFMARK
     [ExtName("一键激活快否", "en-us:一键激活快否")]
     [ExtDesc("可以一键激活快否")]
     [ExtAuth("MonoLogueChi")]
-    [ExtVersion(0, minor: 0, build: 1)]
+    [ExtVersion(0, minor: 0, build: 2)]
     [ExtRequiredDeviceStates((DeviceState)2)]   //开机状态使用
     [ExtMinApi(value: 8)]
     [ExtTargetApi(value: 8)]
@@ -75,7 +78,6 @@ namespace AutumnBox.KFMARK
                     ui.Finish("下载出错");
                     return;
                 }
-
                 ui.Progress = 70;
 
                 //安装快否
