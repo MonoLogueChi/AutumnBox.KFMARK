@@ -13,8 +13,8 @@ namespace AutumnBox.KFMARK
     [ExtAuth("MonoLogueChi")]
     [ExtVersion(0, minor: 0, build: 2)]
     [ExtRequiredDeviceStates((DeviceState)2)]   //开机状态使用
-    [ExtMinApi(value: 8)]
-    [ExtTargetApi(value: 8)]
+    [ExtMinApi(value: 9)]
+    [ExtTargetApi(value: 9)]
     [ExtIcon(@"Resources.icon.png")]
     public class KFMARK : LeafExtensionBase
     {
